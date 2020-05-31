@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>the Fibonacci sequence</title>
+    </head>
+    <body>
+
+        <h1>The Fibonacci sequence constructor</h1>
+        <form onsubmit="fibonacci(); return false">
+            <label for="count"> Enter the number of terms from 1 to 33</label><br>
+            <input type="number" id="count">
+            <p><input type="radio" name="choice" value="even" id="even" checked>
+                <label for="even">Get sum of the even-valued terms</label><Br>
+                <input type="radio" name="choice" value="odd" id="odd">
+                <label for="odd">Get sum of the odd-valued terms</label><Br>
+                <input type="radio" name="choice" value="choice" id="all">
+                <label for="all">Get sum of the all-valued terms</label><Br></p>
+            <button type="submit">Submit</button>
+        </form>
+        <p>--------------------------------------------------------------------------------</p>
+        <script src="fibonacci.js"></script>
+
+    </body>
+</html>
