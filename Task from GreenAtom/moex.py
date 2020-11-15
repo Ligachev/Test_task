@@ -16,7 +16,20 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 
+"""
+moex.py скрипт для создания и отправки отчета по индикативным валютным парам.
+Разбит на части:
+Request на API moex.com;
+Обработка response;
+Создание файла exel и запись обработанной информации;
+Отправка готового отчета по email.
+"""
+
+
 def get_res(date_last: str, date_now: str, currency: str) -> Response:
+    """
+    Request на API moex.com, обработка исключений.
+    """
     try:
         res = requests.get(
             url='https://moex.com/export/derivatives/currency-rate.aspx',
@@ -33,6 +46,9 @@ def get_res(date_last: str, date_now: str, currency: str) -> Response:
 
 
 def get_elem_tree(res: Response) -> Element:
+    """
+    Обработка pesponse, постороение ElementTree.
+    """
     with open('moex.xml', 'w') as f:
         f.write(res.text)
     return ET.ElementTree(file='moex.xml')
@@ -50,6 +66,9 @@ _cur_inf = {
 
 
 def iter_trees(usd_xml_trees: Element, eur_xml_trees: Element) -> int:
+    """
+    Итерация по ElementTree.
+    """
     book = xlwt.Workbook()
     sheet = create_sheet(book)
     row = 0
@@ -90,6 +109,9 @@ def create_sheet(book: Workbook) -> Worksheet:
 
 
 def write_to_book(sheet: Worksheet, row: int, cur_inf: dict):
+    """
+    Запись обработанной информации в Worksheet.
+    """
     row = sheet.row(row)
     style = XFStyle()
     for index, value in enumerate(cur_inf.values()):
@@ -100,6 +122,9 @@ def write_to_book(sheet: Worksheet, row: int, cur_inf: dict):
 
 
 def get_correct_declension(rows: int) -> str:
+    """
+    Выбор правильной формы для склонения "строки".
+    """
     morph = pymorphy2.MorphAnalyzer()
     word = morph.parse('строка')[0]
     v1, v2, v3 = word.inflect({'sing', 'nomn'}), word.inflect({'gent'}), word.inflect({'plur', 'gent'})
@@ -115,6 +140,9 @@ def get_correct_declension(rows: int) -> str:
 
 
 def send_message(rows_int: int, rows_str: str):
+    """
+    Послать отчет с вложением на email.
+    """
     msg = MIMEMultipart()
 
     password = "1234qwerASDF"
@@ -140,6 +168,10 @@ def send_message(rows_int: int, rows_str: str):
 
 
 def main():
+    """
+    Основная функция.
+    Определен период и валютные пары.
+    """
     date_now = datetime.date.today()
     date_last = (date_now - datetime.timedelta(31))
     currency = ['USD_RUB', 'EUR_RUB']
