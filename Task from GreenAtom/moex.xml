@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<?xml-stylesheet type="text/xsl" href="/export/derivatives/currency-rate-ru.xsl"?>
+<rtsdata moment="2020-11-15 20:57:16" exchange-type="EUR/RUB">
+    <rates>
+        <rate moment="2020-11-13 18:30:00" value="91.8454" />
+        <rate moment="2020-11-13 13:45:00" value="91.4967" />
+        <rate moment="2020-11-12 18:30:00" value="90.9402" />
+        <rate moment="2020-11-12 13:45:00" value="90.6494" />
+        <rate moment="2020-11-11 18:30:00" value="90.3243" />
+        <rate moment="2020-11-11 13:45:00" value="89.8003" />
+        <rate moment="2020-11-10 18:30:00" value="90.3614" />
+        <rate moment="2020-11-10 13:45:00" value="90.0684" />
+        <rate moment="2020-11-09 18:30:00" value="89.8855" />
+        <rate moment="2020-11-09 13:45:00" value="91.6625" />
+        <rate moment="2020-11-06 18:30:00" value="92.1024" />
+        <rate moment="2020-11-06 13:45:00" value="91.9458" />
+        <rate moment="2020-11-05 18:30:00" value="91.1128" />
+        <rate moment="2020-11-05 13:45:00" value="91.7339" />
+        <rate moment="2020-11-03 18:30:00" value="92.9255" />
+        <rate moment="2020-11-03 13:45:00" value="93.196" />
+        <rate moment="2020-11-02 18:30:00" value="93.6798" />
+        <rate moment="2020-11-02 13:45:00" value="93.6882" />
+        <rate moment="2020-10-30 18:30:00" value="92.8126" />
+        <rate moment="2020-10-30 13:45:00" value="92.5697" />
+        <rate moment="2020-10-29 18:30:00" value="92.0893" />
+        <rate moment="2020-10-29 13:45:00" value="92.9609" />
+        <rate moment="2020-10-28 18:30:00" value="92.2719" />
+        <rate moment="2020-10-28 13:45:00" value="91.9798" />
+        <rate moment="2020-10-27 18:30:00" value="91.1429" />
+        <rate moment="2020-10-27 13:45:00" value="90.3986" />
+        <rate moment="2020-10-26 18:30:00" value="90.0128" />
+        <rate moment="2020-10-26 13:45:00" value="90.4128" />
+        <rate moment="2020-10-23 18:30:00" value="90.2671" />
+        <rate moment="2020-10-23 13:45:00" value="90.487" />
+        <rate moment="2020-10-22 18:30:00" value="90.4912" />
+        <rate moment="2020-10-22 13:45:00" value="91.0301" />
+        <rate moment="2020-10-21 18:30:00" value="91.1003" />
+        <rate moment="2020-10-21 13:45:00" value="91.3927" />
+        <rate moment="2020-10-20 18:30:00" value="91.5464" />
+        <rate moment="2020-10-20 13:45:00" value="91.9012" />
+        <rate moment="2020-10-19 18:30:00" value="91.3433" />
+        <rate moment="2020-10-19 13:45:00" value="91.3671" />
+        <rate moment="2020-10-16 18:30:00" value="91.2488" />
+        <rate moment="2020-10-16 13:45:00" value="91.5975" />
+        <rate moment="2020-10-15 18:30:00" value="91.5811" />
+        <rate moment="2020-10-15 13:45:00" value="91.3132" />
+    </rates>
+</rtsdata>
